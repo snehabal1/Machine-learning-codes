@@ -1,0 +1,12 @@
+%% 
+M1= 5;
+mu1 = zeros(46,M1);
+
+Xforclosed = randperm(X_Training,M1);
+Xforclosed = (Xforclosed).';
+
+for i= 1 : M1
+    mu1 = Xtraining(randperm(Xforclosed(i),M1)); 
+end
+%%
+

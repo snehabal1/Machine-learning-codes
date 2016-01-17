@@ -1,0 +1,16 @@
+%% calculate design matrix
+phi = zeros(noTrainDocs,M1);
+phi(:,1)= 1;
+
+   
+for j= 2 : M1
+
+   for i = 1 : noTrainDocs
+   a= inv(Sigma1(:,:,j));   
+   b= (X_training(i,:).'-mu1(:,j)).';
+   c= (X_training(i,:).'-mu1(:,j));
+   d= -0.5 * a * b * c;
+   phi(i,j) = exp(d);
+   end
+   
+end

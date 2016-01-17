@@ -1,0 +1,5 @@
+%% Root mean square error
+
+Err= ((Y_training-phi*w1).')*(-Y_training);
+trainPer1 = sqrt((2*Err)/noValidationDocs);
+
